@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Typing Search Animation&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Poppins', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 696px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.search-bar {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #181818;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #202022;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 17px 25px 16px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.search-text {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #5c5c5c;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cursor {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: blink 1s step-end infinite;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes blink {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>50% {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.suggestions {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.suggestion-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #5c5c5c;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: opacity 0.5s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.suggestion-item.faded {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.3;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.arrow-button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 35.163px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 35.575px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.arrow-svg {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="title"&gt;Ask raven, it'll get it done in a minute&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Search Bar --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="search-bar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="search-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span id="typedText"&gt;&lt;/span&gt;&lt;span class="cursor"&gt;|&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="arrow-button"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg class="arrow-svg" fill="none" preserveAspectRatio="none" viewBox="0 0 35.163 35.575"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;g&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;rect fill="white" height="35.575" rx="17.5815" width="35.163" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;path d="M16.588 13.4L11.688 18.3C11.488 18.5 11.2547 18.5958 10.988 18.5875C10.7213 18.5792 10.488 18.475 10.288 18.275C10.1047 18.075 10.0088 17.8417 10.0005 17.575C9.99217 17.3083 10.088 17.075 10.288 16.875L16.888 10.275C16.988 10.175 17.0963 10.1042 17.213 10.0625C17.3297 10.0208 17.4547 10 17.588 10C17.7213 10 17.8463 10.0208 17.963 10.0625C18.0797 10.1042 18.188 10.175 18.288 10.275L24.888 16.875C25.0713 17.0583 25.163 17.2875 25.163 17.5625C25.163 17.8375 25.0713 18.075 24.888 18.275C24.688 18.475 24.4505 18.575 24.1755 18.575C23.9005 18.575 23.663 18.475 23.463 18.275L18.588 13.4V24.575C18.588 24.8583 18.4922 25.0958 18.3005 25.2875C18.1088 25.4792 17.8713 25.575 17.588 25.575C17.3047 25.575 17.0672 25.4792 16.8755 25.2875C16.6838 25.0958 16.588 24.8583 16.588 24.575V13.4Z" fill="#1C1B1F" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Suggestion Items - Plain Text Only --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="suggestions"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="suggestion-item" id="suggestion1"&gt;What documents do I need for customs clearance?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="suggestion-item" id="suggestion2"&gt;How do I track my shipment in real-time?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const searchQueries = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>searchText: "Can you give me details of the goods?",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>suggestions: [</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"What documents do I need for customs clearance?",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"How do I track my shipment in real-time?"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>]</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>searchText: "Can you create shipment for attached Booking confirmation?",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>suggestions: [</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"What's the estimated delivery time for ocean freight?",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"How do I calculate shipping costs for my cargo?"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>]</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>searchText: "What are the list of shipments currently available?",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>suggestions: [</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Can you help me file an insurance claim?",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"What are the customs regulations for importing electronics?"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>]</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>searchText: "How do I schedule a pickup for my freight?",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>suggestions: [</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"What packaging requirements are needed for hazardous materials?",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Can you provide a quote for air freight to Europe?"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>]</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentIndex = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const typedText = document.getElementById('typedText');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const suggestion1 = document.getElementById('suggestion1');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const suggestion2 = document.getElementById('suggestion2');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const suggestionItems = document.querySelectorAll('.suggestion-item');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function typeText(text, callback) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let charIndex = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>typedText.textContent = '';</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Fade out suggestions while typing</p>
+<p class="p1"><span class="Apple-converted-space">      </span>suggestionItems.forEach(item =&gt; item.classList.add('faded'));</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const typingInterval = setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (charIndex &lt; text.length) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>typedText.textContent += text[charIndex];</p>
+<p class="p1"><span class="Apple-converted-space">          </span>charIndex++;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>clearInterval(typingInterval);</p>
+<p class="p2"><span class="Apple-converted-space">          </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>// Fade in suggestions after typing completes</p>
+<p class="p1"><span class="Apple-converted-space">          </span>suggestionItems.forEach(item =&gt; item.classList.remove('faded'));</p>
+<p class="p2"><span class="Apple-converted-space">          </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (callback) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(callback, 2000); // Wait 2 seconds before next query</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}, 50); // Fast typing speed (50ms per character)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function startAnimation() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const currentQuery = searchQueries[currentIndex];</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Update suggestions</p>
+<p class="p1"><span class="Apple-converted-space">      </span>suggestion1.textContent = currentQuery.suggestions[0];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>suggestion2.textContent = currentQuery.suggestions[1];</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Type the search text</p>
+<p class="p1"><span class="Apple-converted-space">      </span>typeText(currentQuery.searchText, () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>currentIndex = (currentIndex + 1) % searchQueries.length;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>startAnimation();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Start the animation</p>
+<p class="p1"><span class="Apple-converted-space">    </span>startAnimation();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
